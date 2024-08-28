@@ -1,0 +1,60 @@
+.language-selector {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px; /* Ajusta el ancho del selector según sea necesario */
+  display: flex;
+  align-items: center;
+}
+
+.flag-icon {
+  width: 24px; /* Ajusta el ancho de la bandera */
+  height: 16px; /* Ajusta la altura de la bandera */
+  margin-right: 8px; /* Espacio entre la bandera y el texto */
+  vertical-align: middle;
+}
+
+.language-name {
+  vertical-align: middle;
+}
+
+/* Ejemplo de estilos para el modo oscuro */
+.dark-mode .language-selector {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark-mode .flag-icon {
+  filter: brightness(0.8); /* Ajusta la visibilidad en modo oscuro */
+}
+
+.dark-mode .language-name {
+  color: #fff; /* Asegúrate de que el texto sea legible en modo oscuro */
+}
+
+
+select {
+    width: 100px; // Ajusta el ancho del selector según sea necesario
+    height: 40px; // Ajusta la altura del selector según sea necesario
+    padding: 0;
+    border: none;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag-icon {
+    width: 24px;  // Ajusta el tamaño de las banderas según sea necesario
+    height: auto; // Mantiene la relación de aspecto
+  }
+  

@@ -1,0 +1,10 @@
+
+<select id="language-select" (change)="onLanguageChange($event)" [value]="currentLanguage" class="language-selector" aria-label="Select language">
+  <option *ngFor="let lang of languages" [value]="lang.lang" [attr.title]="lang.name">
+    <div>
+        <img [src]="lang.flag" alt="{{ lang.name }}" class="flag-icon" />
+        <span class="language-name">{{ lang.name }}</span>
+    </div>
+   
+  </option>
+</select>

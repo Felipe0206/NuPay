@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+:root {
+    --header-bg-light: #fff;
+    --header-text-light: #000;
+    --header-bg-dark: #000;
+    --header-text-dark: #fff;
+  }
+  
+  header {
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+  }
+  
+  [data-theme='dark'] header {
+    background-color: var(--header-bg-dark);
+    color: var(--header-text-dark);
+  }
+  
+
+
+  :root[data-theme='light'] {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  :root[data-theme='dark'] {
+    --background-color: #000000;
+    --text-color: #ffffff;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  

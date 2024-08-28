@@ -1,0 +1,26 @@
+.container {
+    background-image: url('../../../../assets/images/fondoLogin.png');
+    background-size: cover; /* Asegura que la imagen cubra el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    border-radius: 8px; /* Opcional: para bordes redondeados */
+    background-color: var(--background-color);
+  }
+  
+.form {
+    background-color: var(--background-color);
+  padding: 20px; /* Espacio interno del formulario */
+  border-radius: 8px; /* Bordes redondeados del formulario */
+  color: var(--text-color);
+}
+
+.form-control {
+    background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.btn-primary {
+  background-color: #0beea6; /* Fondo sólido para el botón de envío */
+  color: var(--text-color);
+}

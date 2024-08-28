@@ -1,0 +1,50 @@
+/* login.component.scss */
+
+:host {
+    display: block;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .container-fluid {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .card {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .btn-primary {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+  }
+  
+  /* Variables de colores para el modo oscuro y claro */
+  :root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --card-background-color: #f8f9fa;
+    --card-text-color: #000000;
+    --button-background-color: #0beea6;
+    --button-text-color: #000;
+  }
+  
+  [data-theme='dark'] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --card-background-color: #1e1e1e;
+    --card-text-color: #e0e0e0;
+    --button-background-color: #0beea6;
+    --button-text-color: #000;
+  }
+  
+
+  .fondo {
+    background-image: url('../../../../assets/images/fondoLogin.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

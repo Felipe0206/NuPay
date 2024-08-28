@@ -1,0 +1,156 @@
+<div [ngClass]="pageClass">
+    <div class="container mt-5 card">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <!-- begin::Heading -->
+            <div class="mb-11 text-center">
+              <h1 class="mb-4 text-nowrap">
+                <b class="text-center" style="font-size: 1.5em;">NU</b>
+                <strong class="text-center" style="font-size: 1em; width: 100%; background-color: #0beea6; border-radius: 10px; padding: 4px;">
+                  <b>Pay</b>
+                </strong>
+                FINANCE
+              </h1>
+              <h3 class="card-subtitle text-start text-nowrap mb-4" style="font-size: 2.1em;">
+                <b>Gracias por elegirnos</b>
+              </h3>
+            </div>
+            <!-- end::Heading -->
+    
+            <!-- begin::Login options -->
+            <div class="row g-3 mb-9">
+              <div class="col-md-6">
+                <a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
+                  <img alt="Google" src="../../../../assets/images/google-icon.svg" class="img-fluid me-3" style="max-width: 30px;" />
+                  Google
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
+                  <img alt="Apple" src="../../../../assets/images/apple-black.svg" class="img-fluid me-3" style="max-width: 30px;" />
+                  Apple
+                </a>
+              </div>
+            </div>
+            <!-- end::Login options -->
+    
+            <div class="separator separator-content my-14" style="background-color: #000000;">
+              <span class="w-125px text-gray-500 fw-semibold fs-7 text-nowrap">O con tu Email</span>
+            </div>
+    
+            <div *ngIf="status" class="mb-lg-15 alert alert-danger">
+              <div class="alert-text font-weight-bold">{{ status }}</div>
+            </div>
+    
+            <!-- begin::Form group fullname -->
+            <div class="fv-row mb-8">
+              <input type="text" formControlName="fullname" placeholder="Nombre completo" autocomplete="off"
+                [ngClass]="{ 'is-invalid': isInvalid('fullname'), 'is-valid': isValid('fullname') }" class="form-control" />
+              <div *ngIf="isInvalid('fullname')" class="fv-plugins-message-container">
+                <div class="fv-help-block">
+                  <span role="alert">{{ registrationForm.get('fullname')?.errors?.['message'] }}</span>
+                </div>
+              </div>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Form group lastname -->
+            <div class="fv-row mb-8">
+              <input type="text" formControlName="lastname" placeholder="Apellidos" autocomplete="off"
+                [ngClass]="{ 'is-invalid': isInvalid('lastname'), 'is-valid': isValid('lastname') }" class="form-control" />
+              <div *ngIf="isInvalid('lastname')" class="fv-plugins-message-container">
+                <div class="fv-help-block">
+                  <span role="alert">{{ registrationForm.get('lastname')?.errors?.['message'] }}</span>
+                </div>
+              </div>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Form group email -->
+            <div class="fv-row mb-8">
+              <input type="email" formControlName="email" placeholder="Email" autocomplete="off"
+                [ngClass]="{ 'is-invalid': isInvalid('email'), 'is-valid': isValid('email') }" class="form-control" />
+              <div *ngIf="isInvalid('email')" class="fv-plugins-message-container">
+                <div class="fv-help-block">
+                  <span role="alert">{{ registrationForm.get('email')?.errors?.['message'] }}</span>
+                </div>
+              </div>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Form group country code -->
+            <div class="fv-row mb-8">
+              <select formControlName="countryCode" class="form-control"
+                [ngClass]="{ 'is-invalid': isInvalid('countryCode'), 'is-valid': isValid('countryCode') }">
+                <option *ngFor="let country of countryCodes" [value]="country.code">{{ country.label }}</option>
+              </select>
+              <div *ngIf="isInvalid('countryCode')" class="fv-plugins-message-container">
+                <div class="fv-help-block">
+                  <span role="alert">{{ registrationForm.get('countryCode')?.errors?.['message'] }}</span>
+                </div>
+              </div>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Form group mobile -->
+            <div class="fv-row mb-8">
+              <input type="text" formControlName="mobil" placeholder="Número de móvil" autocomplete="off"
+                [ngClass]="{ 'is-invalid': isInvalid('mobil'), 'is-valid': isValid('mobil') }" class="form-control" />
+              <div *ngIf="isInvalid('mobil')" class="fv-plugins-message-container">
+                <div class="fv-help-block">
+                  <span role="alert">{{ registrationForm.get('mobil')?.errors?.['message'] }}</span>
+                </div>
+              </div>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Form group password -->
+            <div class="fv-row mb-8">
+              <input type="password" formControlName="password" placeholder="Password" autocomplete="off"
+                [ngClass]="{ 'is-invalid': isInvalid('password'), 'is-valid': isValid('password') }" class="form-control" />
+              <div *ngIf="isInvalid('password')" class="fv-plugins-message-container">
+                <div class="fv-help-block">
+                  <span role="alert">{{ registrationForm.get('password')?.errors?.['message'] }}</span>
+                </div>
+              </div>
+              <div class="text-muted">Use 8 or more characters with a mix of letters, numbers & symbols.</div>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Form group confirm password -->
+            <div class="fv-row mb-5">
+              <input type="password" formControlName="changepassword" placeholder="Password confirmation" autocomplete="off"
+                [ngClass]="{ 'is-invalid': isInvalid('changepassword'), 'is-valid': isValid('changepassword') }" class="form-control" />
+              <div *ngIf="isInvalid('changepassword')" class="fv-plugins-message-container">
+                <div class="fv-help-block">
+                  <span role="alert">{{ registrationForm.get('changepassword')?.errors?.['message'] }}</span>
+                </div>
+              </div>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Form group -->
+            <div class="fv-row mb-8">
+              <label class="form-check form-check-custom form-check-solid">
+                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" />
+                <span class="form-check-label text-gray-600" for="acceptTerms">
+                  Acepto los <a href="#">términos y condiciones</a>
+                </span>
+              </label>
+            </div>
+            <!-- end::Form group -->
+    
+            <!-- begin::Submit button -->
+            <div class="d-flex flex-center flex-wrap">
+              <button (click)="navigateToLogin()" type="submit" class="btn btn-primary w-100 mb-2">
+                Regístrate
+              </button>
+            </div>
+            <!-- end::Submit button -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,93 @@
+<header 
+[ngClass]="{
+  'bg-dark text-white': mode === 'dark', 
+  'bg-white text-dark': mode === 'light'
+}" 
+class="fixed-top header-background shadow-sm"
+>
+<div class="container py-2 py-lg-3">
+    <div class="d-flex align-items-center justify-content-between">
+      <!-- Logo and Theme Toggle Button -->
+      <div class="d-flex align-items-center flex-equal">
+        <button class="btn btn-icon btn-active-color-primary me-2 d-lg-none" (click)="toggleMenu()">
+          <i class="ki-duotone ki-abstract-14 fs-2hx text-dark">
+            <span class="path1"></span>
+            <span class="path2"></span>
+          </i>
+        </button>
+        <a href="#inicio" class="text-dark text-decoration-none fs-4">
+          <img src="assets/images/Footer.png" alt="Logo" class="logo "/>
+        </a>
+
+       
+      </div>
+
+      <!-- Navigation Menu for Desktop -->
+      <div class="d-none d-lg-flex flex-grow-1 justify-content-between align-items-center">
+        <div class="menu menu-column flex-nowrap menu-rounded menu-lg-row menu-title-gray-600 menu-state-title-primary  nav-flush fs-6">
+          <div class="menu-item mx-2" style="white-space: nowrap;">
+            <a class="menu-link nav-link active py-2 px-3 px-xxl-5" href="#Productos">Productos</a>
+          </div>
+          <div class="menu-item mx-2" style="white-space: nowrap;">
+            <a class="menu-link nav-link py-2 px-3 px-xxl-5" href="#Soluciones">Soluciones</a>
+          </div>
+          <div class="menu-item mx-2" style="white-space: nowrap;">
+            <a class="menu-link nav-link py-2 px-3 px-xxl-5" href="#Tarifas">Tarifas</a>
+          </div>
+          <div class="menu-item mx-2" style="white-space: nowrap;">
+            <a class="menu-link nav-link py-2 px-3 px-xxl-5" href="#Contacta">Contacta un asesor</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Button and Theme Selector for Desktop -->
+
+     
+
+    <div class="d-none d-lg-flex align-items-center" style="white-space: nowrap;">
+      <button (click)="navigateToLogin()" class="btn btn-success init" style="background-color: #0beea6; color: #000; border-radius: 25px; padding: 10px 60px; font-size: 1rem; font-weight: normal; border: none;">
+        Iniciar Sesión
+      </button>
+    </div>
+    <app-dark-mode-toggle></app-dark-mode-toggle>
+    
+      
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="d-lg-none" [ngClass]="{'menu-open': menuOpen, 'menu-closed': !menuOpen}">
+      <div class="menu-item py-2" style="white-space: nowrap;">
+        <a class="menu-link" href="#Productos">Productos</a>
+      </div>
+      <div class="menu-item py-2" style="white-space: nowrap;">
+        <a class="menu-link" href="#Soluciones">Soluciones</a>
+      </div>
+      <div class="menu-item py-2" style="white-space: nowrap;">
+        <a class="menu-link" href="#Tarifas">Tarifas</a>
+      </div>
+      <div class="menu-item py-2" style="white-space: nowrap;">
+        <a class="menu-link" href="#Contacta">Contacta un asesor</a>
+      </div>
+      
+      <!-- Dark Mode Toggle Component -->
+
+    </div>
+
+    
+    <div class="boton-1">
+      
+      <div class="d-none d-lg-flex align-items-center " style="white-space: nowrap; ">
+        <button (click)="navigateToLogin()" class="btn btn-success init" style="background-color: #0beea6; color: #000; border-radius: 25px; padding: 10px 60px; font-size: 1rem; font-weight: normal; border: none;">
+          Iniciar Sesión
+        </button>
+      </div>
+  
+      <app-dark-mode-toggle></app-dark-mode-toggle>
+    
+
+    </div>
+  
+
+    
+  </div>
+</header>

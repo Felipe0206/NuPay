@@ -1,0 +1,129 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100 fondo">
+  <div class="card shadow-lg" style="max-width: 900px; width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-6 col-12">
+        <div class="card-body p-10 p-md-5">
+          <h2 class="text-center mb-4 text-nowrap">
+            <b class="text-center mb-4" style="font-size: 1.8em;">NU</b>
+            <strong class="text-center mb-4" style="width: 100%; background-color: #0beea6; border-radius: 12px; padding: 8px;">
+              <b>Pay</b>
+            </strong>
+            FINANCE
+          </h2>
+          <h3 class="card-subtitle text-left mb-4" style="font-size: 2.3em;">
+            <b>¡Bienvenido!</b>
+          </h3>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6 col-12">
+              <a
+                href="#"
+                class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100"
+                style="padding: 12px; font-size: 1.1em;"
+              >
+                <img
+                  alt="Google Logo"
+                  src="assets/images/google-icon.svg"
+                  class="h-25px me-3"
+                />
+                Google
+              </a>
+            </div>
+            <div class="col-md-6 col-12">
+              <a
+                href="#"
+                class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100"
+                style="padding: 12px; font-size: 1.1em;"
+              >
+                <img
+                  alt="Apple Logo Light"
+                  src="assets/images/apple-black.svg"
+                  class="theme-light-show"
+                  style="height: 20px; width: auto; margin-right: 8px;"
+                />
+                <img
+                  alt="Apple Logo Dark"
+                  src="assets/images/apple-black-dark.svg"
+                  class="theme-dark-show"
+                  style="height: 20px; width: auto; margin-right: 8px;"
+                />
+                Apple
+              </a>
+            </div>
+          </div>
+          <div class="separator separator-content my-4">
+            <span class="w-125px text-gray-500 fw-semibold fs-7 text-nowrap">
+              O con tu Email
+            </span>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="kt_login_signin_form">
+            <div class="fv-row mb-4">
+              <input
+                placeholder="Ingresa tu email"
+                formControlName="email"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': loginForm.get('email')?.touched && loginForm.get('email')?.invalid,
+                  'is-valid': loginForm.get('email')?.touched && loginForm.get('email')?.valid
+                }"
+                type="email"
+                style="padding: 12px; font-size: 1.1em;"
+              />
+              <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="fv-plugins-message-container">
+                <span role="alert">Email inválido</span>
+              </div>
+            </div>
+            
+            <div class="fv-row mb-4">
+              <input
+                type="password"
+                placeholder="Ingresa tu contraseña"
+                formControlName="password"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': loginForm.get('password')?.touched && loginForm.get('password')?.invalid,
+                  'is-valid': loginForm.get('password')?.touched && loginForm.get('password')?.valid
+                }"
+                style="padding: 12px; font-size: 1.1em;"
+              />
+              <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="fv-plugins-message-container">
+                <span role="alert">Contraseña inválida</span>
+              </div>
+            </div>
+            
+            <div class="d-grid mb-4">
+              <button
+                type="submit"
+                id="kt_sign_in_submit"
+                class="btn btn-primary"
+                [disabled]="loading || loginForm.invalid"
+                style="background-color: #0beea6; color: black; padding: 12px; font-size: 1.1em;"
+              >
+                <ng-container *ngIf="!loading">
+                  <span class="indicator-label"><b>Ingresar</b></span>
+                </ng-container>
+                <ng-container *ngIf="loading">
+                  <span class="indicator-progress" style="display: block;">
+                    Por favor espera...
+                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                  </span>
+                </ng-container>
+              </button>
+            </div>
+            <div class="text-center mt-4">
+              <span>¿No eres miembro todavía?</span>
+              <a routerLink="/login/registro" class="text-success">Registrarse</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-block">
+        <img
+          src="{{ loginImage }}"
+          class="img-fluid rounded-start"
+          alt="Login"
+          style="width: 100%; height: 100%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
