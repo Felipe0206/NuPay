@@ -56,15 +56,7 @@
             <!-- end::Form group -->
     
             <!-- begin::Form group lastname -->
-            <div class="fv-row mb-8">
-              <input type="text" formControlName="lastname" placeholder="Apellidos" autocomplete="off"
-                [ngClass]="{ 'is-invalid': isInvalid('lastname'), 'is-valid': isValid('lastname') }" class="form-control" />
-              <div *ngIf="isInvalid('lastname')" class="fv-plugins-message-container">
-                <div class="fv-help-block">
-                  <span role="alert">{{ registrationForm.get('lastname')?.errors?.['message'] }}</span>
-                </div>
-              </div>
-            </div>
+            
             <!-- end::Form group -->
     
             <!-- begin::Form group email -->
@@ -80,17 +72,7 @@
             <!-- end::Form group -->
     
             <!-- begin::Form group country code -->
-            <div class="fv-row mb-8">
-              <select formControlName="countryCode" class="form-control"
-                [ngClass]="{ 'is-invalid': isInvalid('countryCode'), 'is-valid': isValid('countryCode') }">
-                <option *ngFor="let country of countryCodes" [value]="country.code">{{ country.label }}</option>
-              </select>
-              <div *ngIf="isInvalid('countryCode')" class="fv-plugins-message-container">
-                <div class="fv-help-block">
-                  <span role="alert">{{ registrationForm.get('countryCode')?.errors?.['message'] }}</span>
-                </div>
-              </div>
-            </div>
+            
             <!-- end::Form group -->
     
             <!-- begin::Form group mobile -->
