@@ -9,7 +9,7 @@
   .custom-hamburger .hamburger-line {
     width: 30px;
     height: 4px;
-    background-color: #28a745; /* Verde */
+    background-color: #0beea6; /* Verde */
     margin: 6px 0;
     border-radius: 2px;
     margin-right: 50px;
@@ -21,7 +21,7 @@
   }
   
   .menu-link:hover {
-    color: #28a745; /* Color verde en hover */
+    color: #0beea6; /* Color verde en hover */
   }
   
   .menu-item {
@@ -54,6 +54,9 @@
   .menu-closed {
     display: none;
   }
+  .d-none{
+    display: block !important;
+  }
   
   /* Responsive adjustments */
   @media (max-width: 991px) {
@@ -69,6 +72,7 @@
     .boton-1{
       display:none;
     }
+   
   }
   
   @media (max-width: 767px) {
