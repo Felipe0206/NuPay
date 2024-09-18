@@ -6,6 +6,29 @@
     padding: 0.5rem 1rem;
   }
   
+  .custom-hamburger .hamburger-line {
+    width: 30px;
+    height: 4px;
+    background-color: #28a745; /* Verde */
+    margin: 6px 0;
+    border-radius: 2px;
+    margin-right: 50px;
+  }
+  
+  .menu-link {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Mantener el color del texto actual */
+  }
+  
+  .menu-link:hover {
+    color: #28a745; /* Color verde en hover */
+  }
+  
+  .menu-item {
+    list-style: none; /* Quitar puntos de las listas */
+  }
+  
+  
   /* Logo */
   .logo {
     max-width: 100%;

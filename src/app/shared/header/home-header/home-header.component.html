@@ -9,12 +9,12 @@ class="fixed-top header-background shadow-sm"
     <div class="d-flex align-items-center justify-content-between">
       <!-- Logo and Theme Toggle Button -->
       <div class="d-flex align-items-center flex-equal">
-        <button class="btn btn-icon btn-active-color-primary me-2 d-lg-none" (click)="toggleMenu()">
-          <i class="ki-duotone ki-abstract-14 fs-2hx text-dark">
-            <span class="path1"></span>
-            <span class="path2"></span>
-          </i>
+        <button class="btn btn-icon btn-active-color-primary me-2 d-lg-none custom-hamburger" (click)="toggleMenu()">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
         </button>
+        
         <a href="#inicio" class="text-dark text-decoration-none fs-4">
           <img src="assets/images/Footer.png" alt="Logo" class="logo "/>
         </a>
@@ -77,12 +77,14 @@ class="fixed-top header-background shadow-sm"
     <div class="boton-1">
       
       <div class="d-none d-lg-flex align-items-center " style="white-space: nowrap; ">
-        <button (click)="navigateToLogin()" class="btn btn-success init" style="background-color: #0beea6; color: #000; border-radius: 25px; padding: 10px 60px; font-size: 1rem; font-weight: normal; border: none;">
+        <button (click)="navigateToLogin()" class="btn btn-success init" style="background-color: #0beea6; color: #000; border-radius: 25px; padding: 10px 60px; font-size: 1rem; font-weight: normal; border: none; margin-left: 20px;">
           Iniciar Sesión
         </button>
       </div>
-  
-      <app-dark-mode-toggle></app-dark-mode-toggle>
+     
+        <app-dark-mode-toggle class="ms-3"></app-dark-mode-toggle>
+   
+      
     
 
     </div>
