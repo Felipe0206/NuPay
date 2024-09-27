@@ -13,15 +13,15 @@ export class HomeComponent implements OnInit{
   computer = '../../../../assets/images/1.png';
   Colash1 = '../../../../assets/images/Colash1.png';
   Colash2 = '../../../../assets/images/Colash2.png';
-  targeta = '../../../../assets/images/targeta.png';
-  Beneficio = '../../../../assets/images/Beneficio.png';
+  targeta = '../../../../assets/images/targeta-1.png';
+  Beneficio = '../../../../assets/images/Mesa de trabajo 34 (1).png';
   wallet = '../../../../assets/images/wallet.png';
   Visa = '../../../../assets/images/Visa.png';
   Efecty = '../../../../assets/images/Efecty.png';
   PSE = '../../../../assets/images/PSE.png';
   Nequi = '../../../../assets/images/Nequi.png';
   cel = '../../../../assets/images/2.png';
-  Footer = '../../../../assets/images/Footer.png';
+  Footer = '../../../../assets/images/Footer-1.png';
 lo: any;
   constructor(private themeModeService: ThemeModeService) { }
 
