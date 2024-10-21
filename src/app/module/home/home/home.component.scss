@@ -62,13 +62,7 @@
     background-color: #ffffff; // Usa el mismo color de fondo que el de la página
     z-index: 1000; // Asegúrate de que el encabezado esté por encima del contenido
   }
-  .minima{
-    width: 40vw !important;
-    top: -40% !important;
-    left: 40%!important;
-    max-width: 395px!important;
   
-   }
    .min{
     max-height: 250px;
     border-radius: 30px !important;
@@ -258,12 +252,7 @@
         
        }
   
-       .minima{
-        width: 35vw !important;
-        min-width:310px;
-        top: -40% !important;
-      
-       }
+       
     
      
     
@@ -299,8 +288,8 @@
     border-radius: 30px !important;
    }
    .minima{
-    width: 15vw !important;
-    top: -40% !important;
+   
+    width: 50vw !important;
   
    }
    button{
@@ -421,8 +410,7 @@
      }
   
     .minima{
-      min-width: 200px;
-      top: -20% !important;
+     
   
     }
   }
